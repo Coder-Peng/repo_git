@@ -1,0 +1,2 @@
+c.txt content
+b.txt is here new new
