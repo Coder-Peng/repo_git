@@ -1,0 +1,19 @@
+a.txt:b.txt c.txt
+	cat b.txt c.txt > a.txt
+b.txt:
+	echo "this is b.txt" > b.txt
+c.txt:
+	echo "c.txt is here" > c.txt
+
+.PHONY:clean
+clean:
+	rm *.txt
+mkdir:
+	mkdir thisisdir
+
+newfile:mkdir
+	cd thisisdir
+	touch newfile
+var:
+	export foo=hello
+	echo "foo=[$$foo]"
