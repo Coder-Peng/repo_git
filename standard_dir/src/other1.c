@@ -1,4 +1,5 @@
 #include "other1.h"
-void welcome(){
-printf("welcomt to compile mutiple files!\n");
+int welcome(int a, int b){
+return a>b?a:b;
+
 }
