@@ -1,0 +1,2 @@
+test1:
+	gcc -o test1 test.c -I../include -lmax -ladd -L../lib
