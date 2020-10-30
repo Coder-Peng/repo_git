@@ -1,0 +1,4 @@
+include ld.so.conf.d/*.conf
+
+/home/liu/repo_git/multifile/staticlib/lib
+

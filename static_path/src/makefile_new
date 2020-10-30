@@ -1,0 +1,20 @@
+VPATH=../include:../lib
+
+test:libadd.a libmax.a  
+	gcc -o test test.c  -I../include -L../lib/static -ladd -lmax 
+
+libadd.a:add.o
+	ar rcs ../lib/libadd.a add.o
+
+add.o:add.c
+	gcc -c add.c -o add.o -I../include
+
+libmax.a:max.o
+	ar rcs ../lib/libmax.a max.o
+
+max.o:max.c
+	gcc -c max.c -o max.o -I../include
+
+.PHONY:clean
+clean:
+	rm -f *.o;rm -f test; rm -f ../lib/*.a;
